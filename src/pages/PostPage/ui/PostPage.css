@@ -1,0 +1,12 @@
+.post-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.post-page__button-back {
+    background: green;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
