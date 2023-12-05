@@ -22,7 +22,6 @@ export const MainPage = () => {
     useInfiniteScroll({
         triggerRef,
         wrapperRef: undefined,
-
         callback: scroll,
     });
 
@@ -31,7 +30,6 @@ export const MainPage = () => {
             <Title tag={'h1'} title='Список постов' />
             {isLoading && <Loader />}
             {data && <PostsList data={data} />}
-            {/* {limit !== 100 && <div className={'trigger'} ref={triggerRef} />} */}
             {error && <p>Что-то пошло не так</p>}
             <div className={'trigger'} ref={triggerRef} />
         </main>

@@ -3,6 +3,8 @@ import classNames from 'classnames';
 
 export const Title = ({ tag, title, className }) => {
     switch (tag) {
+        case 'h1':
+            return <h1 className={classNames(className)}>{title}</h1>;
         case 'h2':
             return <h2 className={classNames(className)}>{title}</h2>;
         case 'h3':
