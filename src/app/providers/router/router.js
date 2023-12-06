@@ -1,11 +1,12 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { MainPage } from '../../../pages/MainPage';
 import { PostPage } from '../../../pages/PostPage';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: '/',
         element: <MainPage />,
+        errorElement: <div>Что-то пошло не так</div>,
     },
     {
         path: '/:id',

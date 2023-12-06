@@ -4,13 +4,14 @@ import './PostPage.css';
 import { fetchPostById } from '../../../entities/Post';
 import { useParams } from 'react-router-dom';
 import { Loader } from '../../../shared';
+import { Page } from '../../../widgets';
 
 export const PostPage = () => {
     const { id } = useParams();
     const { data: post, isLoading, error } = fetchPostById(id);
 
     return (
-        <main className='post-page'>
+        <Page>
             {isLoading && <Loader />}
 
             {!isLoading && (
@@ -20,6 +21,6 @@ export const PostPage = () => {
                 </>
             )}
             {error && <p>что-то пошло не так</p>}
-        </main>
+        </Page>
     );
 };
