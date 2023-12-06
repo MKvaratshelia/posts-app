@@ -1,6 +1,5 @@
 import { memo } from 'react';
 import './PostsList.css';
-
 import { Post } from '../Post/Post';
 
 export const PostsList = memo(({ data }) => {
