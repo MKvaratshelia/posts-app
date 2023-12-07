@@ -1,6 +1,8 @@
 import { createHashRouter, RouterProvider } from 'react-router-dom';
-import { MainPage } from '../../../pages/MainPage';
-import { PostPage } from '../../../pages/PostPage';
+import { MainPageAsync as MainPage } from '../../../pages/MainPage';
+import { PostPageAsync as PostPage } from '../../../pages/PostPage';
+import { Suspense } from 'react';
+import { Loader } from '../../../shared';
 
 const router = createHashRouter([
     {
@@ -15,5 +17,9 @@ const router = createHashRouter([
 ]);
 
 export const AppRouter = ({ children }) => {
-    return <RouterProvider router={router}>{children}</RouterProvider>;
+    return (
+        <Suspense fallback={<Loader />}>
+            <RouterProvider router={router}>{children}</RouterProvider>
+        </Suspense>
+    );
 };

@@ -7,7 +7,7 @@ import { setLimit } from '../../../entities/Post/model/slice/postSlice';
 import { Loader, Title } from '../../../shared';
 import { Page } from '../../../widgets';
 
-export const MainPage = () => {
+const MainPage = () => {
     const dispatch = useDispatch();
     const limit = useSelector(getLimit);
 
@@ -26,3 +26,5 @@ export const MainPage = () => {
         </Page>
     );
 };
+
+export default MainPage;

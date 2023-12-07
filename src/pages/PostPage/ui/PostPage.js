@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import { Loader } from '../../../shared';
 import { Page } from '../../../widgets';
 
-export const PostPage = () => {
+const PostPage = () => {
     const { id } = useParams();
     const { data: post, isLoading, error } = fetchPostById(id);
 
@@ -24,3 +24,5 @@ export const PostPage = () => {
         </Page>
     );
 };
+
+export default PostPage;
