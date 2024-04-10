@@ -1,8 +1,7 @@
 .page {
     margin: 0 auto;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     overflow-y: auto;
-    height: 100%;
 }
 
 .trigger {

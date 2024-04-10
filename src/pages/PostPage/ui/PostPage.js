@@ -1,5 +1,5 @@
 import { PostDetails } from '../../../entities/Post';
-import { BackButton } from '../../../features';
+import { BackButton } from '../../../features/BackButton';
 import './PostPage.css';
 import { fetchPostById } from '../../../entities/Post';
 import { useParams } from 'react-router-dom';
