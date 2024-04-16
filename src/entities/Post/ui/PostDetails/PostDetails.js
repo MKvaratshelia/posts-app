@@ -1,6 +1,7 @@
+import { memo } from 'react';
 import { P, Title } from '../../../../shared';
 
-export const PostDetails = ({ post }) => {
+export const PostDetails = memo(({ post }) => {
     return (
         <div className='post-details'>
             <P>№ {post.id}</P>
@@ -8,4 +9,4 @@ export const PostDetails = ({ post }) => {
             <P className='postitem__body'>{post.body}</P>
         </div>
     );
-};
+});
